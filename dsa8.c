@@ -1,3 +1,7 @@
+// Write a program to declare an array of structures where each instance of the structure stores the name of
+// an employee, the salary of the employee, and the age of the employee. Display as the final output of
+// your program the list of names of employees who are above 30 years of age and receive a salary greater
+// than Rs. 50,000.
 #include <stdio.h>
 struct emp
 {

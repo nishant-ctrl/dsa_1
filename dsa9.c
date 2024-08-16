@@ -1,3 +1,7 @@
+// Write a program to take an array of integers as input from the user, and then calculate the sum of all the
+// odd numbers of the array using a recursive function called add_odds. There should be no iterative
+// statement in add_odds to calculate the required sum. Display the required sum as the final output of
+// your program.
 #include <stdio.h>
 int add_odds(int odd[100] , int n)
 {

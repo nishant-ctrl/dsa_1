@@ -1,3 +1,5 @@
+// Write a program to enter a matrix from the user where each element of the matrix is an integer, and then
+// print the sum of all elements of the matrix.
 #include <stdio.h>
 int main()
 {

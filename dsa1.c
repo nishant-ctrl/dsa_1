@@ -1,3 +1,6 @@
+// Write a program to store a set of names of students in an array and then find out the length of each
+// name. Take the number of students and the names of the students as input from the user. After taking all
+// inputs, print the length values as the final output of your program.
 #include<stdio.h>
 int len_name(char name[])
 {

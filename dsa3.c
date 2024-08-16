@@ -1,3 +1,7 @@
+// Write a program to declare a structure, with the tag student, which contains three variables: i) name,
+// which can store a string, ii) marks, which can store a fraction, and iii) length, which can store an
+// integer. Take the values of name and marks from the user, and then calculate the length of name and
+// store it in length. Display all three values as the final output of your program.
 #include <stdio.h>
 struct student
 {
