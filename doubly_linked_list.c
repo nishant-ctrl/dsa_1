@@ -9,6 +9,7 @@ struct node
 void print_list_head(struct node *head)
 {
     struct node *ii;
+    printf("NULL ->");
     for(ii=head ; ii!=NULL ; ii=ii->next)
     {
         printf("%d -> " ,ii->data);
@@ -18,6 +19,7 @@ void print_list_head(struct node *head)
 void print_list_tail(struct node *tail)
 {
     struct node *ii;
+    printf("NULL ->");
     for(ii=tail ; ii!=NULL ; ii=ii->prev)
     {
         printf("%d -> " ,ii->data);
