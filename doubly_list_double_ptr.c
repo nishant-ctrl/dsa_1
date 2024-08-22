@@ -6,20 +6,20 @@ struct node
     struct node *next;
     struct node *prev;
 };
-struct node *insert(struct node * head)
+void insert(struct node **head , struct node **tail)
 {
     int position;
-    if(head==NULL)
+    if(*head==NULL)
     {
         printf("List is empty.");
-        return head;
+        return;
     }
     printf("\nEnter the position at which you to insert newnnode: ");
     scanf("%d" ,&position);
     if(position<1)
     {
         printf("\nInvalid position.\n");
-        return head;
+        return ;
     }
     struct node *ii,*newnode=NULL;
     newnode=malloc(sizeof(struct node));
@@ -29,13 +29,19 @@ struct node *insert(struct node * head)
     newnode->prev=NULL;
     if(position==1)
     {
-        newnode->next=head;
-        head->prev=newnode;
-        head=newnode;
-        return head;
+        newnode->next=(*head);
+        (*head)->prev=newnode;
+        (*head)=newnode;
+        return;
     }
     int count=0;
-    for(ii=head ; ii!=NULL ; ii=ii->next)
+    int total=0;
+    for(ii=*head ; ii!=NULL ; ii=ii->next)
+    {
+        total++;
+    }
+    printf("\n%d\n" ,total);
+    for(ii=*head ; ii!=NULL ; ii=ii->next)
     {
         count++;
         if(count==position-1)
@@ -47,11 +53,15 @@ struct node *insert(struct node * head)
             {
                 newnode->next->prev=newnode;
             }
-            return head;
+            if(total==position-1)
+            {
+                (*tail)=newnode;
+            }
+            return;
         }
     }
     printf("Invalid Position.");
-    return head;
+    return;
 }
 void print_list_head(struct node *head)
 {
@@ -107,10 +117,10 @@ int main()
     print_list_head(head);
     printf("\n");
     print_list_tail(tail);
-    head=insert(head);
+    insert(&head,&tail);
     printf("PRINTING THE LIST\n");
     print_list_head(head);
     printf("\n");
-    //print_list_tail(tail);
+    print_list_tail(tail);
     return 0;
 }
